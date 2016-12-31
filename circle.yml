@@ -11,4 +11,4 @@ dependencies:
           sudo ./bootstrap.sh &&
           sudo rm project-config.jam &&
           sudo cp -a ../tmp/config/. . &&
-          sudo cp -a ../tmp/libtool/. /tools/build/src/engine/boehm_gc/
+          sudo cp -a ../tmp/libtool/. /tools/build/src/engine/boehm_gc/.
