@@ -2,6 +2,7 @@
 #Supported versions here https://circleci.com/docs/android
 dependencies:
     override:
+        - printenv
         - sudo apt-get update
         - sudo apt-get -y install build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev clang-3.5
         - sudo ln -s /usr/bin/clang-3.5 /usr/bin/clang
@@ -14,4 +15,4 @@ dependencies:
           yes | rm project-config.jam &&
           cp -a ../tmp/config/. . &&
           yes | cp -rf ../tmp/libtool/libtool.m4 tools/build/src/engine/boehm_gc/. &&
-          ./b2 -d+2 -j 4 --reconfigure target-os=android toolset=clang-android include=${ANDROID_NDK_STANDALONE}/include/c++/4.9.x link=static,shared variant=debug,release threading=multi --layout=versioned --prefix=${BOOST_INSTALL_DIR} install
+          sudo ./b2 -d+2 -j 4 --reconfigure target-os=android toolset=clang-android include=${ANDROID_NDK_STANDALONE}/include/c++/4.9.x link=static,shared variant=debug,release threading=multi --layout=versioned --prefix=${BOOST_INSTALL_DIR} install
