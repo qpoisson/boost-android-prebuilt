@@ -7,10 +7,8 @@ dependencies:
         - sudo apt-get -y install build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev
         - wget -c 'http://sourceforge.net/projects/boost/files/boost/1.62.0/boost_1_62_0.tar.bz2/download'
         - tar xf download
-        - cp -a boost_1_62_0/. .
-        - sudo chmod 777 bootstrap.sh
-        - sudo ./bootstrap.sh
-        - sudo rm project-config.jam
-        - sudo cp -a tmp/config/. .
-        - ls
-        - sudo cp -a tmp/libtool/. /tools/build/src/engine/boehm_gc/
+        - sudo chmod 777 boost_1_62_0/bootstrap.sh
+        - sudo ./boost_1_62_0/bootstrap.sh
+        - sudo rm /boost_1_62_0/project-config.jam
+        - sudo cp -a tmp/config/. /boost_1_62_0/
+        - sudo cp -a tmp/libtool/. /boost_1_62_0/tools/build/src/engine/boehm_gc/
