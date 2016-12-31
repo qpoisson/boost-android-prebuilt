@@ -9,6 +9,7 @@ dependencies:
         - cd boost_1_62_0/. . &&
           sudo chmod 777 bootstrap.sh && 
           sudo ./bootstrap.sh &&
-          rm project-config.jam &&
+          yes | rm project-config.jam &&
           cp -a ../tmp/config/. . &&
-          yes | cp -rf ../tmp/libtool/libtool.m4 tools/build/src/engine/boehm_gc/.
+          yes | cp -rf ../tmp/libtool/libtool.m4 tools/build/src/engine/boehm_gc/. &&
+          ./b2 -d+2 -j 4 --reconfigure target-os=android toolset=clang-android include=${ANDROID_NDK_STANDALONE}/include/c++/4.9.x link=static,shared variant=debug,release threading=multi --layout=versioned --prefix=${BOOST_INSTALL_DIR} install
