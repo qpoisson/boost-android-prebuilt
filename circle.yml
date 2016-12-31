@@ -4,6 +4,8 @@ dependencies:
     override:
         - sudo apt-get update
         - sudo apt-get -y install build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev clang-3.5
+        - sudo ln -s /usr/bin/clang-3.5 /usr/bin/clang
+        - sudo ln -s /usr/bin/clang++-3.5 /usr/bin/clang++
         - wget -c 'http://sourceforge.net/projects/boost/files/boost/1.62.0/boost_1_62_0.tar.bz2/download'
         - tar xf download
         - cd boost_1_62_0/. . &&
