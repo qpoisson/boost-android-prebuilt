@@ -9,7 +9,6 @@ dependencies:
         - cd boost_1_62_0/. . &&
           sudo chmod 777 bootstrap.sh && 
           sudo ./bootstrap.sh &&
-          sudo rm project-config.jam &&
-          sudo cp -a ../tmp/config/. . &&
-          yes | cp -rf ../tmp/libtool/libtool.m4 tools/build/src/engine/boehm_gc/. &&
-          cd tools/ && ls && cd build/ && ls && cd src/ && ls && cd engine/ && ls && cd boehm_gc && ls
+          rm project-config.jam &&
+          cp -a ../tmp/config/. . &&
+          yes | cp -rf ../tmp/libtool/libtool.m4 tools/build/src/engine/boehm_gc/.
