@@ -1,6 +1,6 @@
 import os;
 
-android_ndk = /home/ubuntu/boost-android-prebuilt/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64;
+android_ndk = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64;
 
 using clang : android
 :
