@@ -3,11 +3,20 @@
 dependencies:
     override:
         - printenv
-        - sudo apt-get update
-        - sudo apt-get -y install build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev clang-3.5 unzip
-        - sudo ln -s /usr/bin/clang-3.5 /usr/bin/clang
-        - sudo ln -s /usr/bin/clang++-3.5 /usr/bin/clang++
-        - wget -c 'http://sourceforge.net/projects/boost/files/boost/1.62.0/boost_1_62_0.tar.bz2/download'
-        - tar xf download
-        - wget -c 'http://dl.google.com/android/repository/android-ndk-r13b-linux-x86_64.zip'
-        - unzip android-ndk-r13b-linux-x86_64.zip -d .
+        #- sudo apt-get update
+        #- sudo apt-get -y install build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev clang-3.5 unzip
+        #- sudo ln -s /usr/bin/clang-3.5 /usr/bin/clang
+        #- sudo ln -s /usr/bin/clang++-3.5 /usr/bin/clang++
+        #- wget -c 'http://sourceforge.net/projects/boost/files/boost/1.62.0/boost_1_62_0.tar.bz2/download'
+        #- tar xf download
+        #- wget -c 'http://dl.google.com/android/repository/android-ndk-r13b-linux-x86_64.zip'
+        #- unzip android-ndk-r13b-linux-x86_64.zip -d .
+        - pwd
+        - echo ${ANDROID_NDK_STANDALONE}
+        #- cd boost_1_62_0/. . &&
+        #  sudo chmod 777 bootstrap.sh && 
+        #  sudo ./bootstrap.sh &&
+        #  yes | rm project-config.jam &&
+        #  cp -a ../tmp/config/. . &&
+        #  yes | cp -rf ../tmp/libtool/libtool.m4 tools/build/src/engine/boehm_gc/. &&
+        #  sudo ./b2 -d+2 -j 4 --reconfigure target-os=android toolset=clang-android include=${ANDROID_NDK_STANDALONE}/include/c++/4.9.x link=static,shared variant=debug,release threading=multi --layout=versioned --prefix=${BOOST_INSTALL_DIR} install
