@@ -2,7 +2,7 @@
 #Supported versions here https://circleci.com/docs/android
 general:
     artifacts:
-        - "artifacts" 
+        - "artifacts.zip" 
     
 dependencies:
     override:
