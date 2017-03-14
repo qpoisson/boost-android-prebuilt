@@ -10,5 +10,4 @@ dependencies:
         - wget -c 'http://sourceforge.net/projects/boost/files/boost/1.62.0/boost_1_62_0.tar.bz2/download'
         - tar xf download
         - wget -c 'http://dl.google.com/android/repository/android-ndk-r13b-linux-x86_64.zip'
-        - unzip android-ndk-r13b-linux-x86_64.zip -d android-ndk
-        - cd android-ndk && ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+        - unzip android-ndk-r13b-linux-x86_64.zip -d .
