@@ -1,9 +1,46 @@
 import os;
 
-android_ndk = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 ;
+android_ndk_armeabi = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 ;
+android_ndk_aarch64 = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 ;
+android_ndk_mips = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64 ;
+android_ndk_mips64 = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/mips64el-linux-androideabi-4.9/prebuilt/linux-x86_64 ;
+android_ndk_x86 = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/x86-4.9/prebuilt/linux-x86_64 ;
+android_ndk_x86_64 = /home/ubuntu/boost-android-prebuilt/android-ndk-r13b/toolchains/x86_64-4.9/prebuilt/linux-x86_64 ;
 
-using clang : android
+
+
+using clang : android-armeabi
 :
-$(android_ndk)/bin/arm-linux-androideabi-clang++
+$(android_ndk_armeabi)/bin/arm-linux-androideabi-clang++
+:
+;
+
+using clang : android-aarch64
+:
+$(android_ndk_aarch64)/bin/aarch64-linux-android-clang++
+:
+;
+
+using clang : mips
+:
+$(android_mips)/bin/mipsel-linux-android-clang++
+:
+;
+
+using clang : mips64
+:
+$(android_mips64)/bin/mip64el-linux-android-clang++
+:
+;
+
+using clang : x86
+:
+$(android_x86)/bin/i686-linux-android-clang++
+:
+;
+
+using clang : x86_64
+:
+$(android_x86_64)/bin/x86_64-linux-android-clang++
 :
 ;
