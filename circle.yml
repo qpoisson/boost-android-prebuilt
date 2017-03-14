@@ -1,5 +1,9 @@
 #Install android build tools, platforms
 #Supported versions here https://circleci.com/docs/android
+general:
+    artifacts:
+        - "artifacts" 
+    
 dependencies:
     override:
         - printenv
