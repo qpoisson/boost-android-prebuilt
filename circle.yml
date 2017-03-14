@@ -26,3 +26,7 @@ dependencies:
           sudo ./b2 -d+2 -j 4 --reconfigure target-os=android toolset=clang-android include=/home/ubuntu/boost-android-prebuilt/android-toolchains/arm/include/c++/4.9.x link=static,shared variant=debug,release threading=multi --layout=versioned --prefix=/home/ubuntu/boost-android-prebuilt/artifacts/ install
         - cd /home/ubuntu/boost-android-prebuilt/artifacts/ && ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
         - zip artifacts -r artifacts.zip .
+        
+test:
+  override:
+    - "true"
