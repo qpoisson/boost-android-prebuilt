@@ -8,7 +8,7 @@ dependencies:
     override:
         - printenv
         - sudo apt-get update
-        - sudo apt-get -y install build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev clang-3.5 unzip
+        - sudo apt-get -y install build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev clang-3.5 zip unzip
         - sudo ln -s /usr/bin/clang-3.5 /usr/bin/clang
         - sudo ln -s /usr/bin/clang++-3.5 /usr/bin/clang++
         - wget -c 'http://sourceforge.net/projects/boost/files/boost/1.62.0/boost_1_62_0.tar.bz2/download'
@@ -25,3 +25,4 @@ dependencies:
           yes | cp -rf ../tmp/libtool/libtool.m4 tools/build/src/engine/boehm_gc/. &&
           sudo ./b2 -d+2 -j 4 --reconfigure target-os=android toolset=clang-android include=/home/ubuntu/boost-android-prebuilt/android-toolchains/arm/include/c++/4.9.x link=static,shared variant=debug,release threading=multi --layout=versioned --prefix=/home/ubuntu/boost-android-prebuilt/artifacts/ install
         - cd /home/ubuntu/boost-android-prebuilt/artifacts/ && ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
+        - zip artifacts -r artifacts.zip .
