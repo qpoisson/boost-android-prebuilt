@@ -22,7 +22,7 @@ dependencies:
 #        - android-ndk-r13b/build/tools/make_standalone_toolchain.py --arch mips64 --api 24 --install-dir /home/ubuntu/boost-android-prebuilt/android-toolchains/mips64/
 #        - android-ndk-r13b/build/tools/make_standalone_toolchain.py --arch x86 --api 24 --install-dir /home/ubuntu/boost-android-prebuilt/android-toolchains/x86/
 #        - android-ndk-r13b/build/tools/make_standalone_toolchain.py --arch x86_64 --api 24 --install-dir /home/ubuntu/boost-android-prebuilt/android-toolchains/x86_64/
-        - cd boost_1_62_0/. &&
+        - cd boost_1_63_0/. &&
           sudo chmod 777 bootstrap.sh && 
           sudo ./bootstrap.sh &&
           yes | rm project-config.jam &&
